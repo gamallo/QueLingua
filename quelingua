@@ -1,0 +1,66 @@
+#!/bin/bash
+
+#shopt -s extglob
+
+
+###################################################################
+# Script para facilitar o uso do identificador QueLingua
+#   - - A variábel QUELINGUA_DIR estabelece o PATH dos programas.
+#
+# Grupo ProlNat 2010
+###################################################################
+
+############################
+# Config
+############################
+
+QUELINGUA_DIR="/home/gamallo/WorkingPrograms_modif/reconhecedor/QueLingua/devel/QueLingua"
+PROGS=$QUELINGUA_DIR"/scripts"
+LEXICONS=$QUELINGUA_DIR"/lexicons"
+MORPHO=$QUELINGUA_DIR"/morpho"
+
+
+############################
+# Functions
+############################
+
+help()
+{
+  echo "Syntax: ./quelingua <file>
+      
+      file=path of the file input 
+"
+  exit
+}
+
+
+# Parámetros obrigatorios
+#[ $# -lt 1 ] && help
+#FILE=$1
+
+# Parametros optativos
+[ "$1" != "" ] && FILE=$1
+
+
+###building a temporal lexicon:
+for i in $LEXICONS/* ; do cat $i |gawk -v LANG=`basename $i |sed "s/\.lx//"` '{print $0"\t"LANG}' >> __tmp; done
+
+###defining morpho files (only suffix):
+SUFFIX=$MORPHO"/suffix.txt"
+
+
+
+#echo "parametros:: $FILE"
+
+if [ "$FILE" == "" ]; then
+
+   $PROGS/tokens.perl | $PROGS/reconhecedorLinguasTodas_morpho.perl __tmp  $SUFFIX
+fi
+
+if [ "$FILE" != "" ]; then
+
+   cat $FILE |$PROGS/tokens.perl | $PROGS/reconhecedorLinguasTodas_morpho.perl __tmp $SUFFIX
+fi
+
+rm __tmp
+

@@ -1,0 +1,63 @@
+#!/bin/bash
+
+#shopt -s extglob
+
+
+###################################################################
+# Script para construir um lexicon a partir dum texto
+#   - - A variábel QUELINGUA_DIR estabelece o PATH dos programas.
+#
+# Grupo ProlNat 2010
+###################################################################
+
+############################
+# Config
+############################
+
+QUELINGUA_DIR="./QueLingua"
+PROGS=$QUELINGUA_DIR"/scripts"
+LEXICONS=$QUELINGUA_DIR"/lexicons"
+
+
+
+############################
+# Functions
+############################
+
+help()
+{
+  echo "Syntax: 
+      ./LexiconBuilder <MAX> [FILE]
+      cat FILE |./LexiconBuilder <MAX>
+       
+      file=path of the file input 
+      MAX=size of the lexicon
+"
+  exit
+}
+
+
+# Parámetros obrigatorios
+[ $# -lt 1 ] && help
+MAX=$1
+
+# Parametros optativos
+[ "$2" != "" ] && FILE=$2
+
+
+
+
+#echo "parametros:: $FILE"
+
+if [ "$FILE" == "" ]; then
+  $PROGS/tokens.perl |grep -v "[0-9]" |$PROGS/limpar.x |grep -v "^[A-Z]" |$PROGS/sorting.perl $MAX
+
+fi
+
+if [ "$FILE" != "" ]; then
+
+  cat $FILE |$PROGS/tokens.perl |grep -v "[0-9]" |$PROGS/limpar.x |grep -v "^[A-Z]" |$PROGS/sorting.perl $MAX
+
+fi
+
+
