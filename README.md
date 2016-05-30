@@ -1,71 +1,67 @@
-DEP-PATTERN PARSERS AND COMPILER
+# QueLingua: language identifier
 
-Author: 
-Pablo Gamallo Otero
-Grupo ProLNat
-University of Santiago de Compostela
-Spain
+##Author
+Grupo ProLNat@GE
+CiTIUS, University of Santiago de Compostela
+Galiza
 
 
-DESCRIPTION
-This software contains a language indentifier for 5 languages: English, Spanish, Galician, French, and Portuguese. 
+## DESCRIPTION
+This software contains a language indentifier for several languages: English, Portuguese, Spanish, Galician (gl and gz), French, Catalan, Euskera, Indu, Urdu, Bengali, Tamil. 
 The main programs  were implemented in PERL.
 
 
-REQUIREMENTS
+## REQUIREMENTS
 any Linux distribution
 
 
-HOW TO INSTALL
+## HOW TO INSTALL
+* With git:
+```
+git clone https://github.com/gamallo/QueLingua.git
+sh install-quelingua.sh
+```
+* With zip version (download QueLingua-master.zip):
+```
+unzip QueLingua-master.zip
+sh install-quelingua.sh
+```
 
-(1)
-> tar  xzvf  QueLingua.tgz
+## HOW TO USE 
 
-(2)
-> sh install-quelingua.sh
-
-
-HOW TO USE 
-
+```
 ./quelingua <FILE> or cat FILE |./quelingua 
 
       file=path of the file input
-           
+```       
 
-INPUT FILE
+## INPUT FILE
 
 The input file must be in plain text format. 
-File codification must be latin 1  (however, if the input texts are in UTF-8, you can use the lexicons stored in './lexicons_unicode' by copying them to './lexicons').
+File encoding: UTF-8.
 
 
-ENHENCEMENTS
+## ENHENCEMENTS
 
-(1) LEXICON BUILDER:
+* LEXICON BUILDER:
 The user can build new dictionaries in other languages and add them to the repository of lexicons. The output must be saved in ./lexicons.
 
-HOW TO USE THE BUILDER OF LEXICONS
+How to use the lexicon builder:
 
+```
 ./LexiconBuilder <MAX> <FILE> or cat <FILE> |./LexiconBuilder <MAX> 
 
 	MAX=size of the lexicon
 	file=path of the file input
-           
+```        
 
-INPUT FILE
-
-The input file must be in plain text format. 
-File codification must be latin 1 (however, if the input texts are in UTF-8, you can use the lexicons stored in './lexicons_unicode' by copying them to './lexicons').
-
-
-(2) MORPHOLOGICAL INFORMATION
+* MORPHOLOGICAL INFORMATION
 The user can edit files with morphological information. Up to now, it is only possible to write productive suffixes in file './morpho/suffix.txt'. The format of this file consists of 2 columns (suffix \t language). For instance:
 
 çom	gz
 ção	pt
 
-This means that the system takes into account -çom suffixes to enhance the weight of galician-AGAL (gz) language. The same for -ção suffixes and Portuguese (pt) language. The two columns are separated by tabulation (\t). 
-
-	
+This means that the system takes into account -çom suffixes to enhance the weight of galician-AGAL (gz) language. The same for -ção suffixes and Portuguese (pt) language. The two columns are separated by tabulation (\t). 	
 	
 
 	 
