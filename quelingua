@@ -14,7 +14,7 @@
 # Config
 ############################
 
-QUELINGUA_DIR="/home/gamallo/WorkingPrograms_modif/reconhecedor/QueLingua/devel/QueLingua"
+QUELINGUA_DIR="./QueLingua"
 PROGS=$QUELINGUA_DIR"/scripts"
 LEXICONS=$QUELINGUA_DIR"/lexicons"
 MORPHO=$QUELINGUA_DIR"/morpho"
