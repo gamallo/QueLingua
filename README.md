@@ -58,9 +58,10 @@ How to use the lexicon builder:
 * MORPHOLOGICAL INFORMATION
 The user can edit files with morphological information. Up to now, it is only possible to write productive suffixes in file './morpho/suffix.txt'. The format of this file consists of 2 columns (suffix \t language). For instance:
 
+```
 çom	gz
 ção	pt
-
+```
 This means that the system takes into account -çom suffixes to enhance the weight of galician-AGAL (gz) language. The same for -ção suffixes and Portuguese (pt) language. The two columns are separated by tabulation (\t). 	
 	
 
