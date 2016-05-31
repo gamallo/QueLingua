@@ -43,7 +43,7 @@ help()
 
 
 ###building a temporal lexicon:
-for i in $LEXICONS/* ; do cat $i |gawk -v LANG=`basename $i |sed "s/\.lx//"` '{print $0"\t"LANG}' >> __tmp; done
+for i in $LEXICONS/* ; do cat $i |awk -v LANG=`basename $i |sed "s/\.lx//"` '{print $0"\t"LANG}' >> __tmp; done
 
 ###defining morpho files (only suffix):
 SUFFIX=$MORPHO"/suffix.txt"
