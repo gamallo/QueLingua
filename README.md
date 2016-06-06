@@ -71,11 +71,11 @@ This means that the system takes into account -çom suffixes to enhance the weig
 	
 * VARIETIES:
 13 languages/varieties divided in 6 groups: 
-** Bulgarian (`bg`) and  Macedonian (`mk`) group
-** Bosnian (`bs`), Croatian (`hr`) and Serbian (`sr`)
-** Czech (`cz`) and  Slovak (`sk`)
-** Spanish from Argentina (`es-AR`) and from Spain (`es-ES`)
-** Portuguese from Brazil (`pt-BR`) and from Portugal (`pt-PT`)
-** Malay (`my`) and Indonesia (`id`)
+ ** Bulgarian (`bg`) and  Macedonian (`mk`) group
+ ** Bosnian (`bs`), Croatian (`hr`) and Serbian (`sr`)
+ ** Czech (`cz`) and  Slovak (`sk`)
+ ** Spanish from Argentina (`es-AR`) and from Spain (`es-ES`)
+ ** Portuguese from Brazil (`pt-BR`) and from Portugal (`pt-PT`)
+ ** Malay (`my`) and Indonesia (`id`)
 Language varieties trained with the DSL-TASK: https://github.com/Simdiva/DSL-Task
 	 
