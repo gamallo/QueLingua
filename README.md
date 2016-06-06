@@ -7,7 +7,7 @@ Galiza
 
 
 ## DESCRIPTION
-This software contains a language indentifier for several languages:  `en`, `es`, `pt`, `gl` (galician), `gz` (agal galician variety), `fr`, `eu` (euskara), `ca` (catalan), `bn` (bengali), `ur` (urdu), `hi` (hindi), ta (tamil). You can also use the identifier to guess among 16 language varieties  (see below).
+This software contains a language indentifier for several languages:  `en`, `es`, `pt`, `gl` (galician), `gz` (agal galician variety), `fr`, `eu` (euskara), `ca` (catalan), `bn` (bengali), `ur` (urdu), `hi` (hindi), `ta` (tamil). You can also use the identifier to guess among 16 language varieties  (see below).
 The main programs  were implemented in PERL.
 
 
