@@ -17,6 +17,7 @@
 QUELINGUA_DIR="./QueLingua"
 PROGS=$QUELINGUA_DIR"/scripts"
 LEXICONS=$QUELINGUA_DIR"/lexicons"
+LEXICONS_VAR=$QUELINGUA_DIR"/lexicons_var"
 MORPHO=$QUELINGUA_DIR"/morpho"
 
 
@@ -26,9 +27,14 @@ MORPHO=$QUELINGUA_DIR"/morpho"
 
 help()
 {
-  echo "Syntax: ./quelingua <file>
+  echo "Syntax: cat FILE |./quelingua [OPT]
       
-      file=path of the file input 
+      FILE = path of the input file 
+      OPT = options
+
+      Options:
+      -var = identification of varieties (by default: standard languages)
+      -help (--h) = help
 "
   exit
 }
@@ -39,15 +45,23 @@ help()
 #FILE=$1
 
 # Parametros optativos
-[ "$1" != "" ] && FILE=$1
+[ "$1" != "" ] && OPT=$1
 
+if  [ "$OPT" == "--h" ] ||  [ "$OPT" == "-help" ]  ; then
+  help
+fi
+
+if  [ "$OPT" == "-var" ] ; then
 
 ###building a temporal lexicon:
-for i in $LEXICONS/* ; do cat $i |awk -v LANG=`basename $i |sed "s/\.lx//"` '{print $0"\t"LANG}' >> __tmp; done
+  for i in $LEXICONS_VAR/* ; do cat $i |awk -v LANG=`basename $i |sed "s/\.lx//"` '{print $0"\t"LANG}' >> __tmp; done
+else
+###building a temporal lexicon:
+ for i in $LEXICONS/* ; do cat $i |awk -v LANG=`basename $i |sed "s/\.lx//"` '{print $0"\t"LANG}' >> __tmp; done
+fi
 
 ###defining morpho files (only suffix):
 SUFFIX=$MORPHO"/suffix.txt"
-
 
 
 #echo "parametros:: $FILE"

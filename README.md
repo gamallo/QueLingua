@@ -30,9 +30,14 @@ sh install-quelingua.sh
 ## HOW TO USE 
 
 ```
-./quelingua <FILE> or cat FILE |./quelingua 
+Syntax: cat FILE |./quelingua [OPT]
+      
+      FILE = path of the input file 
+      OPT = options
 
-      file=path of the file input
+      Options:
+      -var = identification of varieties (by default: standard languages)
+      -help (--h) = help
 ```       
 
 ## INPUT FILE
@@ -64,5 +69,13 @@ The user can edit files with morphological information. Up to now, it is only po
 ```
 This means that the system takes into account -çom suffixes to enhance the weight of galician-AGAL (gz) language. The same for -ção suffixes and Portuguese (pt) language. The two columns are separated by tabulation (\t). 	
 	
-
+* VARIETIES:
+13 languages/varieties divided in 6 groups: 
+** Bulgarian (`bg`) and  Macedonian (`mk`) group
+** Bosnian (`bs`), Croatian (`hr`) and Serbian (`sr`)
+** Czech (`cz`) and  Slovak (`sk`)
+** Spanish from Argentina (`es-AR`) and from Spain (`es-ES`)
+** Portuguese from Brazil (`pt-BR`) and from Portugal (`pt-PT`)
+** Malay (`my`) and Indonesia (`id`)
+Language varieties trained with the DSL-TASK: https://github.com/Simdiva/DSL-Task
 	 
