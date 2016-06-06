@@ -85,5 +85,5 @@ This means that the system takes into account -çom suffixes to enhance the weig
 
  ** Malay (`my`) and Indonesia (`id`)
 
-Language varieties trained with the DSL-TASK: https://github.com/Simdiva/DSL-Task
+Language varieties trained with the DSL-TASK corpus: https://github.com/Simdiva/DSL-Task
 	 
