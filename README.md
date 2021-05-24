@@ -7,7 +7,7 @@ Galiza
 
 
 ## DESCRIPTION
-This software contains a language indentifier for several languages:  `en`, `es`, `pt`, `gl` (galician), `gz` (agal galician variety), `fr`, `eu` (euskara), `ca` (catalan), `bn` (bengali), `ur` (urdu), `hi` (hindi), `ta` (tamil). You can also use the identifier to guess among 16 language varieties  (see below).
+This software contains a language indentifier for several languages:  `en`, `es`, `pt`, `gl` (galician), `gz` (agal galician variety), `fr`, `eu` (euskara), `ca` (catalan), `bn` (bengali), `ur` (urdu), `hi` (hindi), `ta` (tamil). You can also use the identifier to guess among 16 language varieties and 2 medieval languages  (see below). 
 The main programs  were implemented in PERL.
 
 
@@ -86,4 +86,12 @@ This means that the system takes into account -çom suffixes to enhance the weig
  ** Malay (`my`) and Indonesia (`id`)
 
 Language varieties trained with the DSL-TASK corpus: https://github.com/Simdiva/DSL-Task
-	 
+
+* MEDIEVAL LANGUAGES:
+
+2 medieval languages are added:
+
+ ** Galician-Portuguese (`gl\_XIII-XV`)
+ ** Medieval Spanish (`es\_XIII-XV`)
+
+Models were trained with TMILG - Tesouro Medieval Informatizado da Língua Galega by ILG - Instituto Galego da Língua	 
