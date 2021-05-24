@@ -91,7 +91,7 @@ Language varieties trained with the DSL-TASK corpus: https://github.com/Simdiva/
 
 2 medieval languages are added:
 
- ** Galician-Portuguese (`gl\_XIII-XV`)
- ** Medieval Spanish (`es\_XIII-XV`)
+ ** Galician-Portuguese (`gl_XIII-XV`)
+ ** Medieval Spanish (`es_XIII-XV`)
 
 Models were trained with TMILG - Tesouro Medieval Informatizado da Língua Galega by ILG - Instituto Galego da Língua	 
